@@ -72,7 +72,7 @@ export class AppComponent implements OnInit {
           `${this.innerBottom}px`
         );
       }
-    }, 20);
+    }, 30);
   }
 
   end(): void {
