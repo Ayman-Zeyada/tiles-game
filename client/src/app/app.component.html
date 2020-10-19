@@ -1,0 +1,25 @@
+<div class="tiles">
+  <div class="tiles__title-wrapper">
+    <div class="tiles__title">Tiles Master</div>
+    <button (click)="start()">Start</button>
+    <button (click)="end()">End</button>
+  </div>
+  <div class="tiles__wrapper" #wrapper>
+    <div class="tiles__inner" #inner>
+      <div
+        class="column"
+        *ngFor="let column of tilesGrid.columns; let colIndex = index"
+        [style.width]="column.width + '%'"
+      >
+        <div
+          class="tiles__box"
+          *ngFor="let tile of column.tiles; let tileIndex = index"
+          (click)="onTileClick(tile, colIndex)"
+          [class.selected]="tile.selected"
+        >
+          <img [src]="tile.img" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

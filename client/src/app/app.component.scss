@@ -1,0 +1,45 @@
+.tiles {
+  max-width: 800px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font-size: 3rem;
+    text-align: center;
+  }
+  &__wrapper {
+    background-color: blue;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+  }
+  &__inner {
+    width: 100%;
+    background-color: red;
+    position: absolute;
+    transition: all 0.2s linear;
+    display: flex;
+    align-items: flex-end;
+    .column {
+      width: 25%;
+      height: fit-content;
+    }
+  }
+  &__box {
+    width: 100%;
+    background-color: #ddd;
+    border: 1px solid #555;
+    box-sizing: border-box;
+    display: flex;
+    padding: 0.5rem;
+    &.selected {
+      box-shadow: inset 0px 0px 9px 5px rgba(0,0,0,0.5)
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
